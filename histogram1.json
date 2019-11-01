@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "pubblicazioniDeRussisEsportate.json"},
+  "width": 400,
+  "heigth": 700,
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "num_pubblicazioni"}],
+      "groupby": ["year","description"]
+    }
+  ],
+
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno"}},
+    "y": {"field": "num_pubblicazioni", "type": "quantitative", "axis":{"title":"Numero di pubblicazioni"}},
+    "color":{"field": "description", "type": "nominal", "legend":{"title":"Tipologia"}},
+    "tooltip": [
+      {"field": "num_pubblicazioni", "type": "quantitative"},
+      {"field":  "description", "type": "nominal"}
+    ]
+  }
+}

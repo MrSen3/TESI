@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "pubblicazioniDeRussisEsportate.json"},
+  "width": 400,
+  "heigth": 700,
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "numero_contributi"}],
+      "groupby": ["year","contributors"]
+    }
+  ],
+
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+
+
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno", "grid": true}},
+    "y": {"field": "contributors", "type": "nominal", "axis":{"title":"Coautori", "grid":true}},
+    "color":{"field": "quartile", "type": "nominal", "legend":{"title":"typeID"}},
+    "size": {
+      "field": "numero_contributi",
+      "type": "quantitative",
+      "legend": {"title": "Quantita' di autori", "clipHeight": 50},
+      "scale": {"range": [0, 2000]}
+    },
+
+    "tooltip": [
+      {"field": "numero_contributi", "type": "quantitative"},
+      {"field": "year", "type": "nominal"}
+    ]
+  }
+}
