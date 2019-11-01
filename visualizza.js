@@ -63,6 +63,14 @@ function visualizza (data, n) {
         let el=document.createElement("div");
         el.setAttribute("id", "histogram");
         base.appendChild(el);
+
+        //vegaEmbed('#histogram', json).then(res =>
+          //  res.view
+            //    .insert('pubblicazioniDeRussisEsportate.json', [
+                    /* some data array */
+              //  ])
+                //.run()
+        //);
         vegaEmbed("#histogram", json);
         histogram=true;
     }
@@ -97,16 +105,8 @@ function visualizza (data, n) {
 }
 
 
-function visualizza (data) {
-    console.log(data);
-    let json = JSON.parse(data);
 
-        vegaEmbed("#grafico", json);
-
-
-}
-
-
+//in jQuery sarebbe: $(document).ready(function()); oppure in maniera piu' compatta:  $(function(){
 window.onload = function () {
     //Gli passo i numeri per capire dove deve andare a inserire i vari grafici
     //for(var i=0; i<5; ++i){
