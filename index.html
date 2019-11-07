@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Visualizzazione di dati bibliometrici</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="prova.css" rel="stylesheet">
     <!-- Import Vega 5 & Vega-Lite 3 (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.4.0"></script>
@@ -14,14 +14,32 @@
 <body>
 
 <div id="content">
-<h1>TESI</h1>
 
-<div id="profilo">
-<h2>Profilo</h2>
-    <p>Nome: Luigi</p>
-    <p>Cognome: De Russis</p>
-</div>
-    <div id="grafico"></div>
+    <h1>TESI</h1>
+
+
+    <div id="profilo">
+        <h2>Profilo</h2>
+        <p>Nome: Luigi</p>
+        <p>Cognome: De Russis</p>
+    </div>
+
+    <!-- Scatter plot da mettere a fianco del profilo -->
+    <div id="scatterplot"></div>
+
+    <!-- Dopodiche' informazioni su cosa c'e' all'interno delle pubblicazioni
+     che tipo di pubblicazioni ha fatto negli anni
+     e infine con quali colleghi ha collaborato negli anni-->
+    <div id="wordcloud"></div>
+    <div id="histogram1"></div>
+    <div id="bubbleplot1"></div>
+    <!-- Sezione riguardante gli articoli in rivista
+     Istogramma con barre divise per quartili
+     Bubble plot per vedere su quali riviste ha pubblicato negli anni con indicazione del quartile della rivista nell'anno (colori quartili presi da www.scimago.com)-->
+    <h2>Articoli in rivista</h2>
+    <div id="histogram2"></div>
+    <div id="bubbleplot2"></div>
+
 <script src="visualizza.js"> </script>
 
 </div>

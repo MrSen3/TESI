@@ -1,0 +1,20 @@
+body{
+    background-color: white;
+    color: black;
+    font-size: 100%;
+    font-family: Arial, Verdana, sans-serif;
+
+}
+div{
+    border: darkseagreen;
+    border-style: solid;
+    width: inherit;
+}
+#content{
+    border: none;
+    border-style: none;
+    width: auto;
+    /*min-width: 40%;*/
+    margin-left: 5%;
+    margin-top: 5%;
+}

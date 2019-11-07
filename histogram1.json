@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "pubblicazioniDeRussisEsportate.json"},
-  "width": 400,
-  "heigth": 700,
+  "data": {"url": "pubblicazioni1.json"},
+  "title": "Istogramma con barre sezionate in base alla tipologia",
+  "width":600,
+  "heigth": 1000,
   "transform": [
     {
       "aggregate": [{"op": "count", "as": "num_pubblicazioni"}],

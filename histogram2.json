@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "articoliInRivista1.json"
+  },
+  "title": "Istogramma con diversa colorazione delle barre in base al quartile degli articoli (le info sui quartili partono dal 1997 e arrivano al 2018)",
+  "width": 600,
+  "heigth": 1000,
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "num_articoli"
+        }
+      ],
+      "groupby": [
+        "anno",
+        "quartile"
+      ]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "anno",
+      "type": "ordinal",
+      "axis": {
+        "title": "Anno"
+      }
+    },
+    "y": {
+      "field": "num_articoli",
+      "type": "quantitative",
+      "axis": {
+        "title": "Numero di articoli"
+      }
+    },
+    "color": {
+      "field": "quartile",
+      "type": "nominal",
+      "scale": {"range": ["#A4CF63", "#E8D559", "#FBA353", "#DD5A4E"]},
+      "legend": {
+        "title": "Quartile"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "num_articoli",
+        "type": "quantitative"
+      },
+      {
+        "field": "quartile",
+        "type": "nominal"
+      }
+    ]
+  }
+}

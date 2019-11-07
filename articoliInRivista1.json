@@ -1,0 +1,143 @@
+
+	[
+		{
+			"handle": "11583/2425975",
+			"title": "DOGeye: Controlling your Home with Eye Interaction",
+			"anno": 2011,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0953-5438",
+			"journal": "INTERACTING WITH COMPUTERS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2465381",
+			"title": "Home Energy Consumption Feedback: A User Survey",
+			"anno": 2012,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0378-7788",
+			"journal": "ENERGY AND BUILDINGS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2506317",
+			"title": "JEERP: Energy Aware Enterprise Resource Planning",
+			"anno": 2014,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2582743",
+			"title": "Supporting Caregivers in Assisted Living Facilities for Persons with Disabilities: a User Study",
+			"anno": 2015,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1615-5289",
+			"journal": "UNIVERSAL ACCESS IN THE INFORMATION SOCIETY",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2586167",
+			"title": "Design Recommendations for Smart Energy Monitoring: a Case Study in Italy",
+			"anno": 2015,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0378-7788",
+			"journal": "ENERGY AND BUILDINGS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2621928",
+			"title": "Educating Internet of Things Professionals: The Ambient Intelligence Course",
+			"anno": 2016,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2648065",
+			"title": "Training Engineers for the Ambient Intelligence Challenge",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0018-9359",
+			"journal": "IEEE TRANSACTIONS ON EDUCATION",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2669698",
+			"title": "Design and Development of One-Switch Video Games for Children with Severe Motor Disabilities",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1936-7228",
+			"journal": "ACM TRANSACTIONS ON ACCESSIBLE COMPUTING",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2676507",
+			"title": "Complex Event Processing for City Officers: A Filter and Pipe Visual Approach",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "2327-4662",
+			"journal": "IEEE INTERNET OF THINGS JOURNAL",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2679191",
+			"title": "DogOnt as a viable seed for semantic modeling of AEC/FM",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1570-0844",
+			"journal": "SEMANTIC WEB",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2691911",
+			"title": "A Semantic Web Approach to Simplifying Trigger-Action Programming in the IoT",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0018-9162",
+			"journal": "COMPUTER",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2693822",
+			"title": "AwareNotifications: Multi-Device Semantic Notification Handling with User-Defined Preferences",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1876-1364",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND SMART ENVIRONMENTS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2705647",
+			"title": "Recognizing Student Research through Symposia and Competitions",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2711304",
+			"title": "An Unsupervised and Non-Invasive Model for Predicting Network Resource Demands",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "2327-4662",
+			"journal": "IEEE INTERNET OF THINGS JOURNAL",
+			"quartile": "Q1"
+		}
+	]

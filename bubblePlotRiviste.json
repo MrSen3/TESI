@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "articoliInRivista1.json"},
+  "title": "Bubble plot riviste",
+  "width": 800,
+  "heigth": 2000,
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "num_articoli"
+        }
+      ],
+      "groupby": [
+        "journal",
+        "quartile",
+        "anno"
+      ]
+    }
+  ],
+
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1,
+    "fill": "#4682b4"
+  },
+
+
+  "encoding": {
+    "x": {"field": "anno", "type": "ordinal", "axis":{"title":"Anno", "grid": true}},
+    "y": {"field": "journal", "type": "nominal", "axis":{"title":"Riviste", "grid":true}},
+    "color": {
+      "field": "quartile",
+      "type": "nominal",
+      "scale": {"range": ["#A4CF63", "#E8D559", "#FBA353", "#DD5A4E"]},
+      "legend": {
+        "title": "Quartile"
+      }
+
+    },
+    "size": {
+      "field": "num_articoli",
+      "type": "quantitative",
+      "legend": {"title": "Quantita' di pubblicazioni", "clipHeight": 50},
+      "scale": {"range": [0, 2000]}
+    },
+
+    "tooltip": [
+      {"field": "journal","title": "Rivista", "type": "nominal"},
+      {"field": "anno", "title": "Anno", "type": "nominal"},
+      {"field": "num_articoli", "title": "Pubblicazioni", "type": "quantitative"},
+      {"field": "quartile", "title": "Quartile", "type": "ordinal"}
+    ]
+  }
+}

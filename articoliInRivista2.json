@@ -1,0 +1,462 @@
+[
+		{
+			"handle": "11583/1398714",
+			"title": "Exploiting Behavioral Information in Gate-Level ATPG",
+			"anno": 1999,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0923-8174",
+			"journal": "JOURNAL OF ELECTRONIC TESTING",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/1398715",
+			"title": "The General Product Machine: a New Model for Symbolic FSM Traversal",
+			"anno": 1998,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0925-9856",
+			"journal": "FORMAL METHODS IN SYSTEM DESIGN",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/1398724",
+			"title": "RT-level ITC'99 benchmarks and first ATPG results",
+			"anno": 2000,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0740-7475",
+			"journal": "IEEE DESIGN & TEST OF COMPUTERS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1404458",
+			"title": "Integrating Online and Offline Testing of a Switching Memory",
+			"anno": 1998,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0740-7475",
+			"journal": "IEEE DESIGN & TEST OF COMPUTERS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1404470",
+			"title": "SymFony: a hybrid topological-symbolic ATPG exploiting RT-level information",
+			"anno": 1999,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0278-0070",
+			"journal": "IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1405863",
+			"title": "Integrating On-Line and Off-Line Testing of a Switching Memory in a Telecommunication System",
+			"anno": 1998,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0740-7475",
+			"journal": "IEEE DESIGN & TEST OF COMPUTERS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1405878",
+			"title": "Code Generation for Functional Validation of Pipelined Microprocessors",
+			"anno": 2004,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0923-8174",
+			"journal": "JOURNAL OF ELECTRONIC TESTING",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1406112",
+			"title": "Automatic Test Program Generation: a Case Study",
+			"anno": 2004,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0740-7475",
+			"journal": "IEEE DESIGN & TEST OF COMPUTERS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1406116",
+			"title": "Evolving assembly programs: how games help microprocessor validation",
+			"anno": 2005,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1089-778X",
+			"journal": "IEEE TRANSACTIONS ON EVOLUTIONARY COMPUTATION",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/1417974",
+			"title": "Exploiting Auto-Adaptive microGP for Highly Effective Test Programs Generation",
+			"anno": 2003,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0302-9743",
+			"journal": "LECTURE NOTES IN COMPUTER SCIENCE",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1509272",
+			"title": "A BIST-based Solution for the Diagnosis of Embedded Memories Adopting Image Processing Techniques",
+			"anno": 2004,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0923-8174",
+			"journal": "JOURNAL OF ELECTRONIC TESTING",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1533362",
+			"title": "Automatic Test Generation for Verifying Microprocessors",
+			"anno": 2005,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0278-6648",
+			"journal": "IEEE POTENTIALS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/1648150",
+			"title": "A blueprint for integrated eye-controlled environments",
+			"anno": 2009,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1615-5289",
+			"journal": "UNIVERSAL ACCESS IN THE INFORMATION SOCIETY",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1801714",
+			"title": "Understanding users and their needs",
+			"anno": 2009,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1615-5289",
+			"journal": "UNIVERSAL ACCESS IN THE INFORMATION SOCIETY",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1838746",
+			"title": "DogOnt - Ontology Modeling for Intelligent Domotic Environments",
+			"anno": 2008,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0302-9743",
+			"journal": "LECTURE NOTES IN COMPUTER SCIENCE",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1840756",
+			"title": "Initializability Analysis of Synchronous Sequential Circuits",
+			"anno": 2002,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1084-4309",
+			"journal": "ACM TRANSACTIONS ON DESIGN AUTOMATION OF ELECTRONIC SYSTEMS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/1853049",
+			"title": "The DOG gateway: enabling ontology-based intelligent domotic environments",
+			"anno": 2008,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0098-3063",
+			"journal": "IEEE TRANSACTIONS ON CONSUMER ELECTRONICS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/1939020",
+			"title": "Review of the state-of-the-art in patent information and forthcoming evolutions in intelligent patent informatics",
+			"anno": 2010,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0172-2190",
+			"journal": "WORLD PATENT INFORMATION",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/1996942",
+			"title": "Automatic Domotic Device Interoperation",
+			"anno": 2009,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0098-3063",
+			"journal": "IEEE TRANSACTIONS ON CONSUMER ELECTRONICS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2284515",
+			"title": "Rule-based Intelligence for Domotic Environments",
+			"anno": 2009,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0926-5805",
+			"journal": "AUTOMATION IN CONSTRUCTION",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2380988",
+			"title": "What Would You Ask to Your Home if It Were Intelligent? Exploring User Expectations about Next-Generation Homes",
+			"anno": 2011,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1876-1364",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND SMART ENVIRONMENTS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2381047",
+			"title": "Enabling Machine Understandable Exchange of Energy Consumption Information in Intelligent Domotic Environments",
+			"anno": 2011,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0378-7788",
+			"journal": "ENERGY AND BUILDINGS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2399669",
+			"title": "Modeling, Simulation and Emulation of Intelligent Domotic Environments",
+			"anno": 2011,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0926-5805",
+			"journal": "AUTOMATION IN CONSTRUCTION",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2425975",
+			"title": "DOGeye: Controlling your Home with Eye Interaction",
+			"anno": 2011,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0953-5438",
+			"journal": "INTERACTING WITH COMPUTERS",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2458589",
+			"title": "DoMAIns: Domain-based Modeling for Ambient Intelligence",
+			"anno": 2012,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1574-1192",
+			"journal": "PERVASIVE AND MOBILE COMPUTING",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2465381",
+			"title": "Home Energy Consumption Feedback: A User Survey",
+			"anno": 2012,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0378-7788",
+			"journal": "ENERGY AND BUILDINGS",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2501975",
+			"title": "Intelligent Energy Optimization for User Intelligible Goals in Smart Home Environments",
+			"anno": 2012,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1949-3053",
+			"journal": "IEEE TRANSACTIONS ON SMART GRID",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2506317",
+			"title": "JEERP: Energy Aware Enterprise Resource Planning",
+			"anno": 2014,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2506415",
+			"title": "Modeling and Formal Verification of Smart Environments",
+			"anno": 2014,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1939-0122",
+			"journal": "SECURITY AND COMMUNICATION NETWORKS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2507278",
+			"title": "SAT based Enforcement of Domotic Effects in Smart Environments",
+			"anno": 2014,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1868-5137",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND HUMANIZED COMPUTING",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2510296",
+			"title": "Real-Time Monitoring of High-Level States in Smart Environments",
+			"anno": 2015,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1876-1364",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND SMART ENVIRONMENTS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2518928",
+			"title": "Design-time formal verification for smart environments: an exploratory perspective",
+			"anno": 2014,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1868-5137",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND HUMANIZED COMPUTING",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2519025",
+			"title": "Autonomic goal-oriented device management for Smart Environments",
+			"anno": 2015,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1876-1364",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND SMART ENVIRONMENTS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2582743",
+			"title": "Supporting Caregivers in Assisted Living Facilities for Persons with Disabilities: a User Study",
+			"anno": 2015,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1615-5289",
+			"journal": "UNIVERSAL ACCESS IN THE INFORMATION SOCIETY",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2621928",
+			"title": "Educating Internet of Things Professionals: The Ambient Intelligence Course",
+			"anno": 2016,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2648065",
+			"title": "Training Engineers for the Ambient Intelligence Challenge",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0018-9359",
+			"journal": "IEEE TRANSACTIONS ON EDUCATION",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2669698",
+			"title": "Design and Development of One-Switch Video Games for Children with Severe Motor Disabilities",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1936-7228",
+			"journal": "ACM TRANSACTIONS ON ACCESSIBLE COMPUTING",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2679363",
+			"title": "SmartBike: an IoT Crowd Sensing Platform for Monitoring City Air Pollution",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "2088-8708",
+			"journal": "INTERNATIONAL JOURNAL OF ELECTRICAL AND COMPUTER ENGINEERING",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2691911",
+			"title": "A Semantic Web Approach to Simplifying Trigger-Action Programming in the IoT",
+			"anno": 2017,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "0018-9162",
+			"journal": "COMPUTER",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2693822",
+			"title": "AwareNotifications: Multi-Device Semantic Notification Handling with User-Defined Preferences",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "1876-1364",
+			"journal": "JOURNAL OF AMBIENT INTELLIGENCE AND SMART ENVIRONMENTS",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2711304",
+			"title": "An Unsupervised and Non-Invasive Model for Predicting Network Resource Demands",
+			"anno": 2018,
+			"typeID": 1,
+			"description": "1.1 Articolo in rivista",
+			"issn": "2327-4662",
+			"journal": "IEEE INTERNET OF THINGS JOURNAL",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2502250",
+			"title": "Use of eye-tracking system communication in ALS patients: positive impact on quality of life and mood",
+			"anno": 2010,
+			"typeID": 5,
+			"description": "1.5 Abstract in rivista",
+			"issn": "1468-1331",
+			"journal": "EUROPEAN JOURNAL OF NEUROLOGY",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2502310",
+			"title": "Can eye-tracking system communication improve quality of life and mood in ALS patients with locked-in syndrome?",
+			"anno": 2010,
+			"typeID": 5,
+			"description": "1.5 Abstract in rivista",
+			"issn": "0340-5354",
+			"journal": "JOURNAL OF NEUROLOGY",
+			"quartile": "Q1"
+		},
+		{
+			"handle": "11583/2507842",
+			"title": "Innovative and Disruptive Technologies",
+			"anno": 2013,
+			"typeID": 5,
+			"description": "1.5 Abstract in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q3"
+		},
+		{
+			"handle": "11583/2572750",
+			"title": "Advancing Cloud Computing",
+			"anno": 2014,
+			"typeID": 5,
+			"description": "1.5 Abstract in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		},
+		{
+			"handle": "11583/2623652",
+			"title": "Smart Systems (Guest Editors' Introduction)",
+			"anno": 2015,
+			"typeID": 5,
+			"description": "1.5 Abstract in rivista",
+			"issn": "1520-9202",
+			"journal": "IT PROFESSIONAL",
+			"quartile": "Q2"
+		}
+	]

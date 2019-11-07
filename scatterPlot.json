@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "pubblicazioniDeRussisEsportate.json"},
+  "data": {"url": "pubblicazioni1.json"},
   "width": 400,
   "heigth": 700,
   "transform": [
@@ -9,78 +9,72 @@
       "groupby": ["year"]
     }
   ],
-"layer": [{
-  "selection": {
-    "brush": {
-      "type": "interval",
-      "encodings": ["x"]
-    }
-  },
-  "mark": {
-    "type": "circle",
-    "opacity": 0.8,
-    "stroke": "black",
-    "strokeWidth": 0.5
-  },
-  "encoding": {
-    "x": {
-      "field": "year",
-      "type": "ordinal",
-      "axis": {
-        "title": "Anno"
+  "layer": [{
+    "selection": {
+      "brush": {
+        "type": "interval",
+        "encodings": ["x"]
       }
     },
-    "y": {
-      "field": "num_pubblicazioni",
-      "type": "quantitative",
-      "axis": {
-        "title": "Numero di pubblicazioni"
-      }
+    "mark": {
+      "type": "line",
+      "point": true,
+      "opacity": 0.8,
+      "stroke": "black",
+      "strokeWidth": 0.5
     },
-    "color": {
-      "field": "description",
-      "type": "nominal",
-      "legend": {
-        "title": "Tipologia"
-      }
-    },
-    "opacity": {
-      "condition": {
-        "selection": "brush", "value": 1
-      },
-      "value": 0.7
-    },
-    "tooltip": [
-      {
-        "field": "num_pubblicazioni",
-        "type": "quantitative"
-      },
-      {
+    "encoding": {
+      "x": {
         "field": "year",
-        "type": "nominal"
-      }
-    ]
-  }
-},
-  {
-    "transform": [{
-      "filter": {"selection": "brush"}
-    }],
-
-  "mark": "rule",
-  "encoding": {
-    "y": {
-      "aggregate": "mean",
-      "field": "num_pubblicazioni",
-      "type": "quantitative"
-    },
-    "color": {
-      "value": "firebrick"
-    },
-    "size": {
-      "value": 3
+        "type": "ordinal",
+        "axis": {
+          "title": "Anno"
+        }
+      },
+      "y": {
+        "field": "num_pubblicazioni",
+        "type": "quantitative",
+        "axis": {
+          "title": "Numero di pubblicazioni"
+        }
+      },
+      "opacity": {
+        "condition": {
+          "selection": "brush", "value": 1
+        },
+        "value": 0.7
+      },
+      "tooltip": [
+        {
+          "field": "num_pubblicazioni",
+          "type": "quantitative"
+        },
+        {
+          "field": "year",
+          "type": "nominal"
+        }
+      ]
     }
-  }
-  }
-]
+  },
+    {
+      "transform": [{
+        "filter": {"selection": "brush"}
+      }],
+
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "num_pubblicazioni",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "firebrick"
+        },
+        "size": {
+          "value": 3
+        }
+      }
+    }
+  ]
 }
