@@ -3,9 +3,9 @@
   "data": {
     "url": "articoliInRivista1.json"
   },
-  "title": "Istogramma con diversa colorazione delle barre in base al quartile degli articoli (le info sui quartili partono dal 1997 e arrivano al 2018)",
-  "width": 600,
-  "heigth": 1000,
+  "title": "Istogramma con barre in pila colorate in base al quartile",
+
+
   "transform": [
     {
       "aggregate": [
@@ -20,6 +20,12 @@
       ]
     }
   ],
+
+  "hconcat": [
+    {
+      "width": 600,
+      "height": 500,
+
   "mark": "bar",
   "encoding": {
     "x": {
@@ -32,27 +38,66 @@
     "y": {
       "field": "num_articoli",
       "type": "quantitative",
+
       "axis": {
-        "title": "Numero di articoli"
+        "title": "Numero di articoli",
+        "bin": {"maxbins": 1}
       }
     },
     "color": {
       "field": "quartile",
       "type": "nominal",
       "scale": {"range": ["#A4CF63", "#E8D559", "#FBA353", "#DD5A4E"]},
-      "legend": {
-        "title": "Quartile"
-      }
+      "legend": null
     },
     "tooltip": [
       {
         "field": "num_articoli",
-        "type": "quantitative"
+        "type": "quantitative",
+        "title": "Quantita' di articoli"
       },
       {
         "field": "quartile",
-        "type": "nominal"
+        "type": "nominal",
+        "title": "Quartile"
       }
     ]
-  }
-}
+  },
+      "transform": [{"filter": {"selection": "legend"}}]
+},
+    {
+      "width": 40,
+      "height": 100,
+      "mark": "circle",
+      "encoding": {
+        "tooltip": null,
+        "color": {
+
+          "condition": {
+            "type": "nominal",
+            "field": "quartile",
+            "legend": null,
+            "selection": "legend"
+          },
+          "value": "lightgray"
+        },
+        "y": {
+          "type": "nominal",
+          "field": "quartile",
+          "title": null
+        }
+      },
+      "selection": {
+        "legend": {
+          "type": "multi",
+          "encodings": [
+            "color"
+          ],
+          "on": "click",
+          "toggle": "true",
+          "resolve": "global",
+          "empty": "all"
+        }
+      }
+    }
+    ]}

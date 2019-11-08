@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "articoliInRivista1.json"},
   "title": "Bubble plot riviste",
-  "width": 800,
-  "heigth": 2000,
+
+
   "transform": [
     {
       "aggregate": [
@@ -20,7 +20,12 @@
     }
   ],
 
-  "mark": {
+  "hconcat": [
+    {
+      "width": 650,
+      "height": 750,
+
+      "mark": {
     "type": "circle",
     "opacity": 0.8,
     "stroke": "black",
@@ -36,15 +41,13 @@
       "field": "quartile",
       "type": "nominal",
       "scale": {"range": ["#A4CF63", "#E8D559", "#FBA353", "#DD5A4E"]},
-      "legend": {
-        "title": "Quartile"
-      }
+      "legend": null
 
     },
     "size": {
       "field": "num_articoli",
       "type": "quantitative",
-      "legend": {"title": "Quantita' di pubblicazioni", "clipHeight": 50},
+      "legend": null,
       "scale": {"range": [0, 2000]}
     },
 
@@ -54,5 +57,42 @@
       {"field": "num_articoli", "title": "Pubblicazioni", "type": "quantitative"},
       {"field": "quartile", "title": "Quartile", "type": "ordinal"}
     ]
-  }
-}
+  },
+      "transform": [{"filter": {"selection": "legend"}}]
+},
+    {
+      "width": 40,
+      "height": 100,
+      "mark": "circle",
+      "encoding": {
+        "tooltip": null,
+        "color": {
+          "condition": {
+            "type": "nominal",
+            "field": "quartile",
+            "legend": null,
+            "selection": "legend"
+          },
+          "value": "lightgray"
+        },
+        "y": {
+          "type": "nominal",
+          "field": "quartile",
+          "title": null
+        }
+      },
+      "selection": {
+        "legend": {
+          "type": "multi",
+          "encodings": [
+            "color"
+          ],
+          "on": "click",
+          "toggle": "true",
+          "resolve": "global",
+          "empty": "all"
+        }
+      }
+    }
+
+  ]}

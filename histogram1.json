@@ -1,9 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "pubblicazioni1.json"},
-  "title": "Istogramma con barre sezionate in base alla tipologia",
-  "width":600,
-  "heigth": 1000,
+  "title": "Istogramma con barre in pila in base al tipo",
+
   "transform": [
     {
       "aggregate": [{"op": "count", "as": "num_pubblicazioni"}],
@@ -11,14 +10,70 @@
     }
   ],
 
-  "mark": "bar",
-  "encoding": {
-    "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno"}},
-    "y": {"field": "num_pubblicazioni", "type": "quantitative", "axis":{"title":"Numero di pubblicazioni"}},
-    "color":{"field": "description", "type": "nominal", "legend":{"title":"Tipologia"}},
-    "tooltip": [
-      {"field": "num_pubblicazioni", "type": "quantitative"},
-      {"field":  "description", "type": "nominal"}
-    ]
-  }
-}
+  "hconcat": [
+    {
+      "width": 600,
+      "height": 500,
+
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal",  "axis":{"title":"Anno"}},
+        "y": {"field": "num_pubblicazioni", "type": "quantitative","axis":{"title":"Numero di pubblicazioni"}},
+        "color":{"field": "description", "type": "nominal", "legend":null},
+        "tooltip": [
+          {
+            "field": "num_pubblicazioni",
+            "type": "quantitative",
+            "title": "Quantita'"
+          },
+          {
+            "field": "description",
+            "type": "nominal",
+            "title": "Tipologia"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Anno"
+          }
+        ]
+      },
+      "transform": [{"filter": {"selection": "legend"}}]
+    },
+    {
+
+      "width": 40,
+      "height": 100,
+
+      "mark": "circle",
+      "encoding": {
+        "tooltip": null,
+        "color": {
+          "condition": {
+            "type": "nominal",
+            "field": "description",
+            "legend": null,
+            "selection": "legend"
+          },
+          "value": "lightgray"
+        },
+        "y": {
+          "type": "nominal",
+          "field": "description",
+          "title": null
+        }
+      },
+      "selection": {
+        "legend": {
+          "type": "multi",
+          "encodings": [
+            "color"
+          ],
+          "on": "click",
+          "toggle": "true",
+          "resolve": "global",
+          "empty": "all"
+        }
+      }
+    }
+  ]}

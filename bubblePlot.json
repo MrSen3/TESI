@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "coautoriProf1.json"},
   "title": "Bubble plot coautori",
-  "width": 800,
-  "heigth": 2000,
+  "width": 650,
+  "height": 700,
 
 
   "mark": {
@@ -13,11 +13,9 @@
     "strokeWidth": 1,
     "fill": "#4682b4"
   },
-
-
   "encoding": {
     "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno", "grid": true}},
-    "y": {"field": "cognome", "type": "nominal", "sort":"null", "axis":{"title":"Coautori", "grid":true}},
+    "y": {"field": "cognome", "type": "nominal", "sort":null, "axis":{"title":"Coautori", "grid":true}},
     "size": {
       "field": "contributi",
       "type": "quantitative",
@@ -26,9 +24,22 @@
     },
 
     "tooltip": [
-      {"field": "contributi", "type": "quantitative"},
-      {"field": "cognome", "type": "nominal"},
-      {"field": "year", "type": "nominal"}
+      {"field": "contributi",
+        "type": "quantitative",
+        "title": "Collaborazioni"
+      },
+      {"field": "cognome",
+        "type": "nominal",
+        "title": "Cognome"
+      },
+      {"field": "nome",
+        "type": "nominal",
+        "title": "Nome"
+      },
+      {"field": "year",
+        "type": "nominal",
+        "title": "Anno"
+      }
     ]
   }
 }

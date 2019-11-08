@@ -47,11 +47,13 @@
       "tooltip": [
         {
           "field": "num_pubblicazioni",
-          "type": "quantitative"
+          "type": "quantitative",
+          "title": "Quantita'"
         },
         {
           "field": "year",
-          "type": "nominal"
+          "type": "nominal",
+          "title": "Anno"
         }
       ]
     }

@@ -10,23 +10,23 @@
       "groupby": ["year","description"]
     }
   ],
+
   "hconcat": [
     {
   "mark": "bar",
   "encoding": {
-    "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno"}},
-    "y": {"field": "num_pubblicazioni", "type": "quantitative", "axis":{"title":"Numero di pubblicazioni"}},
+    "x": {"field": "year", "type": "ordinal",  "axis":{"title":"Anno"}},
+    "y": {"field": "num_pubblicazioni", "type": "quantitative","axis":{"title":"Numero di pubblicazioni"}},
     "color":{"field": "description", "type": "nominal", "legend":null}
   },
       "transform": [{"filter": {"selection": "legend"}}]
 },
     {
-      "mark": "point",
+      "mark": "circle",
       "encoding": {
         "color": {
           "condition": {
             "type": "nominal",
-            "aggregate": "min",
             "field": "description",
             "legend": null,
             "selection": "legend"
