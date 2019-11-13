@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "coautoriProf1.json"},
+  "data": {"name": "myData"},
   "name": "Bubble plot dei coautori",
   "id": "4",
   "title": "Bubble plot coautori",

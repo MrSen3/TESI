@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "pubblicazioni1.json"},
+  "data": {"name": "myData"},
   "name": "Istogramma in pila con barre divise per tipologia",
   "id": "3",
   "title": "Istogramma con barre in pila in base al tipo",

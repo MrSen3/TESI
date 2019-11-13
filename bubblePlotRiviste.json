@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {"url": "articoliInRivista1.json"},
+  "data": {"name": "myData"},
   "title": "Bubble plot riviste",
   "name": "Bubble plot riviste",
   "id": "6",

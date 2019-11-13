@@ -37,18 +37,35 @@ function loadASync(url, success) {
 function okStatus(s) {
     return [200, 304].indexOf(s) >= 0;
 }
-var soldi;
-function salva(data){
-    soldi = JSON.parse(data);
-    console.log(soldi);
-    for (let i=0; i<soldi.length; i++){
-        if(soldi[i].year==9999){
-            soldi[i].year="In stampa"
+var pubblicazioni;
+var coautori;
+var riviste;
+function salvaPubblicazioni(data){
+    pubblicazioni = JSON.parse(data);
+    console.log(pubblicazioni);
+    for (let i=0; i<pubblicazioni.length; ++i){
+        if(pubblicazioni[i].year==9999){
+            pubblicazioni[i].year="In stampa"
         }
     }
-    console.log(soldi);
+    console.log(pubblicazioni);
 }
 
+function salvaCoautori(data){
+    coautori = JSON.parse(data);
+    console.log(coautori);
+    for (let i=0; i<coautori.length; ++i) {
+        if (coautori[i].year == 9999) {
+            coautori[i].year = "In stampa"
+        }
+    }
+    console.log(coautori);
+}
+
+function salvaRiviste(data){
+    riviste = JSON.parse(data);
+    console.log(riviste);
+}
 
 var opt={"actions": false};
 
@@ -62,7 +79,7 @@ function visualizza (data) {
             res.view
                 .insert('myData',
                  //ci vuole  un array al posto delle quadre
-           soldi)
+           pubblicazioni)
                 .run()
         );
         // vegaEmbed("#scatterplot", json)
@@ -71,40 +88,69 @@ function visualizza (data) {
     }
 
     if(json.id==2){
-        // vegaEmbed('#histogram', json).then(res =>
-        //     res.view
-        //         .insert('myData',
-        //          //ci vuole  un array al posto delle quadre
-        //    soldi)
-        //         .run()
-        // );
+        vegaEmbed('#wordcloud', json).then(res =>
+            res.view
+                .insert('table',
+                 //ci vuole  un array al posto delle quadre
+                    pubblicazioni)
+                .run()
+        );
         //Se vegaEmbed ha esito positivo allora viene eseguito quello che c'e' dentro al then, altrimenti viene eseguito quello dentro al catch
-        vegaEmbed("#wordcloud", json)
-           .then(result => console.log("ciao"))
-            .catch(console.warn);
+        // vegaEmbed("#wordcloud", json)
+        //    .then(result => console.log("ciao"))
+        //     .catch(console.warn);
     }
     if(json.id==3){
-        vegaEmbed("#histogram1", json)
-            .then(result => console.log("ciao"))
-            .catch(console.warn);
+        vegaEmbed('#histogram1', json).then(res =>
+            res.view
+                .insert('myData',
+                    //ci vuole  un array al posto delle quadre
+                    pubblicazioni)
+                .run()
+        );
+        // vegaEmbed("#histogram1", json)
+        //     .then(result => console.log("ciao"))
+        //     .catch(console.warn);
     }
 
     if(json.id==4){
-        vegaEmbed("#bubbleplot1", json)
-            .then(result => console.log("ciao"))
-            .catch(console.warn);
+        // vegaEmbed("#bubbleplot1", json)
+        //     .then(result => console.log("ciao"))
+        //     .catch(console.warn);
+        vegaEmbed('#bubbleplot1', json).then(res =>
+            res.view
+                .insert('myData',
+                    //ci vuole  un array al posto delle quadre
+                    coautori)
+                .run()
+        );
+
     }
 
     if(json.id==5){
-        vegaEmbed("#histogram2", json)
-            .then(result => console.log("ciao"))
-            .catch(console.warn);
+        // vegaEmbed("#histogram2", json)
+        //     .then(result => console.log("ciao"))
+        //     .catch(console.warn);
+        vegaEmbed('#histogram2', json).then(res =>
+            res.view
+                .insert('myData',
+                    //ci vuole  un array al posto delle quadre
+                    riviste)
+                .run()
+        );
     }
 
     if (json.id==6){
-        vegaEmbed("#bubbleplot2", json)
-            .then(result => console.log("ciao"))
-            .catch(console.warn);
+        // vegaEmbed("#bubbleplot2", json)
+        //     .then(result => console.log("ciao"))
+        //     .catch(console.warn);
+        vegaEmbed('#bubbleplot2', json).then(res =>
+            res.view
+                .insert('myData',
+                    //ci vuole  un array al posto delle quadre
+                    riviste)
+                .run()
+        );
     }
     //se il json ha l'indicazione 'update' allora creo un paragrafo <p>, ci scrivo l'update e lo attacco(append) dopo la tabella
     if (json.update) {
@@ -127,14 +173,21 @@ function visualizza (data) {
 
 //in jQuery sarebbe: $(document).ready(function()); oppure in maniera piu' compatta:  $(function(){
 window.onload = function () {
-    //Gli passo i numeri per capire dove deve andare a inserire i vari grafici
-    loadASync("pubblicazioni1.json", salva);
-    loadASync("scatterPlot.json", visualizza);
-    loadASync("wordCloud.json", visualizza);
+
+    loadASync("pubblicazioni1.json", salvaPubblicazioni);
+    loadASync("coautoriProf1.json", salvaCoautori);
+    loadASync("articoliInRivista1.json", salvaRiviste);
+
+    setTimeout((
+
+
+    loadASync("scatterPlot.json", visualizza),
+    loadASync("wordCloud.json", visualizza),
     //significa che come file deve prendere quello nella stessa cartella di 'funzioni.js' e che in caso di 'success'===true allora deve entrare in visualizza
-    loadASync("histogram1.json", visualizza);
-    loadASync("bubblePlot.json", visualizza);
-    loadASync("histogram2.json", visualizza);
-    loadASync("bubblePlotRiviste.json", visualizza);
+    loadASync("histogram1.json", visualizza),
+    loadASync("bubblePlot.json", visualizza),
+    loadASync("histogram2.json", visualizza),
+    loadASync("bubblePlotRiviste.json", visualizza))
+    , 5000);
 
 };

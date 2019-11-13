@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "data": {    "url": "articoliInRivista1.json"},
+  "data": {    "name": "myData"},
   "title": "Istogramma con barre in pila colorate in base al quartile",
   "name": "Istogramma in pila con barre divise in base al quartile",
   "id": "5",
