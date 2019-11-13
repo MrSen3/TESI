@@ -37,6 +37,17 @@ function loadASync(url, success) {
 function okStatus(s) {
     return [200, 304].indexOf(s) >= 0;
 }
+var soldi;
+function salva(data){
+    soldi = JSON.parse(data);
+    console.log(soldi);
+    for (let i=0; i<soldi.length; i++){
+        if(soldi[i].year==9999){
+            soldi[i].year="In stampa"
+        }
+    }
+    console.log(soldi);
+}
 
 
 var opt={"actions": false};
@@ -47,23 +58,29 @@ function visualizza (data) {
     //console.log(json.title);
 
     if(json.id==1){
-        vegaEmbed("#scatterplot", json)
-            .then(result => console.log("ciao"))
-            .catch(console.warn);
+        vegaEmbed('#scatterplot', json).then(res =>
+            res.view
+                .insert('myData',
+                 //ci vuole  un array al posto delle quadre
+           soldi)
+                .run()
+        );
+        // vegaEmbed("#scatterplot", json)
+        //     .then(result => console.log("ciao"))
+        //     .catch(console.warn);
     }
 
     if(json.id==2){
-
-        //vegaEmbed('#histogram', json).then(res =>
-          //  res.view
-            //    .insert('pubblicazioni1.json', [
-                    /* some data array */
-              //  ])
-                //.run()
-        //);
+        // vegaEmbed('#histogram', json).then(res =>
+        //     res.view
+        //         .insert('myData',
+        //          //ci vuole  un array al posto delle quadre
+        //    soldi)
+        //         .run()
+        // );
         //Se vegaEmbed ha esito positivo allora viene eseguito quello che c'e' dentro al then, altrimenti viene eseguito quello dentro al catch
         vegaEmbed("#wordcloud", json)
-            .then(result => console.log("ciao"))
+           .then(result => console.log("ciao"))
             .catch(console.warn);
     }
     if(json.id==3){
@@ -111,7 +128,7 @@ function visualizza (data) {
 //in jQuery sarebbe: $(document).ready(function()); oppure in maniera piu' compatta:  $(function(){
 window.onload = function () {
     //Gli passo i numeri per capire dove deve andare a inserire i vari grafici
-
+    loadASync("pubblicazioni1.json", salva);
     loadASync("scatterPlot.json", visualizza);
     loadASync("wordCloud.json", visualizza);
     //significa che come file deve prendere quello nella stessa cartella di 'funzioni.js' e che in caso di 'success'===true allora deve entrare in visualizza
