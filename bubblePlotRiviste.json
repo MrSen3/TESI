@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "articoliInRivista1.json"},
   "title": "Bubble plot riviste",
-
+  "name": "Bubble plot riviste",
+  "id": "6",
 
   "transform": [
     {
@@ -63,7 +64,8 @@
     {
       "width": 40,
       "height": 100,
-      "mark": "circle",
+      "mark": {"type": "circle",
+      "size": 80},
       "encoding": {
         "tooltip": null,
         "color": {

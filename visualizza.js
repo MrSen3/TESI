@@ -7,7 +7,7 @@
  * @param {int} n - indica dove deve essere posizionato il grafico all'interno della pagina
  */
 //Uguale a quella scritta dal prof sulle slide
-function loadASync(url, success, n) {
+function loadASync(url, success) {
     let xhr = new XMLHttpRequest();
     //url e' il file json che ho scelto di leggere
     xhr.open("GET", url, true);
@@ -15,7 +15,7 @@ function loadASync(url, success, n) {
         if (this.readyState === 4)
             if (okStatus(this.status)) {
                 //in caso di successo, passa alla funzione visualizza(che coincide con succeess) il testo contenente nell'URL
-                success(this.responseText, n);
+                success(this.responseText);
             } else {
                 throw "Async request failed (response: " + this.status + ":" + this.statusText + ") for URL " + url;
             }
@@ -38,26 +38,21 @@ function okStatus(s) {
     return [200, 304].indexOf(s) >= 0;
 }
 
-//Flag che mi servono a stampare i grafici nell'ordine corretto
-//var scatter=false;
-//var histogram1=false;
-//var histogram2=true;
-//var bubble=false;
-//var wordcloud=false;
+
 var opt={"actions": false};
 
-function visualizza (data, n) {
-    console.log(n+" "+data);
+function visualizza (data) {
+    console.log(data);
     let json = JSON.parse(data);
+    //console.log(json.title);
 
-    if(n==1){
-
-        vegaEmbed("#scatterplot", json, opt)
+    if(json.id==1){
+        vegaEmbed("#scatterplot", json)
             .then(result => console.log("ciao"))
             .catch(console.warn);
     }
 
-    if(n==2){
+    if(json.id==2){
 
         //vegaEmbed('#histogram', json).then(res =>
           //  res.view
@@ -71,25 +66,25 @@ function visualizza (data, n) {
             .then(result => console.log("ciao"))
             .catch(console.warn);
     }
-    if(n==3){
+    if(json.id==3){
         vegaEmbed("#histogram1", json)
             .then(result => console.log("ciao"))
             .catch(console.warn);
     }
 
-    if(n==4){
+    if(json.id==4){
         vegaEmbed("#bubbleplot1", json)
             .then(result => console.log("ciao"))
             .catch(console.warn);
     }
 
-    if(n==5){
+    if(json.id==5){
         vegaEmbed("#histogram2", json)
             .then(result => console.log("ciao"))
             .catch(console.warn);
     }
 
-    if (n==6){
+    if (json.id==6){
         vegaEmbed("#bubbleplot2", json)
             .then(result => console.log("ciao"))
             .catch(console.warn);
@@ -116,17 +111,13 @@ function visualizza (data, n) {
 //in jQuery sarebbe: $(document).ready(function()); oppure in maniera piu' compatta:  $(function(){
 window.onload = function () {
     //Gli passo i numeri per capire dove deve andare a inserire i vari grafici
-    //for(var i=0; i<5; ++i){
 
-    loadASync("scatterPlot.json", visualizza, 1);
-    loadASync("wordCloud.json", visualizza, 2);
+    loadASync("scatterPlot.json", visualizza);
+    loadASync("wordCloud.json", visualizza);
     //significa che come file deve prendere quello nella stessa cartella di 'funzioni.js' e che in caso di 'success'===true allora deve entrare in visualizza
-    loadASync("histogram1.json", visualizza, 3);
-    loadASync("bubblePlot.json", visualizza, 4);
-    loadASync("histogram2.json", visualizza, 5);
-    loadASync("bubblePlotRiviste.json", visualizza, 6);
+    loadASync("histogram1.json", visualizza);
+    loadASync("bubblePlot.json", visualizza);
+    loadASync("histogram2.json", visualizza);
+    loadASync("bubblePlotRiviste.json", visualizza);
 
-
-
-    //}
 };

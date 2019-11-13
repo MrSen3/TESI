@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "pubblicazioni1.json"},
+  "name": "Istogramma in pila con barre divise per tipologia",
+  "id": "3",
   "title": "Istogramma con barre in pila in base al tipo",
 
   "transform": [
@@ -45,7 +47,8 @@
       "width": 40,
       "height": 100,
 
-      "mark": "circle",
+      "mark": {"type": "circle",
+        "size": 80},
       "encoding": {
         "tooltip": null,
         "color": {

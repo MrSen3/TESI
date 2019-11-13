@@ -1,8 +1,9 @@
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+{ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "pubblicazioni1.json"},
-  "width": 400,
-  "heigth": 700,
+  "name": "Grafico a linee con marcatori di punti",
+  "id": "1",
+  "width": "500",
+  "height": "300",
   "transform": [
     {
       "aggregate": [{"op": "count", "as": "num_pubblicazioni"}],
