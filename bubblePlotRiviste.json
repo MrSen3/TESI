@@ -1,9 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"name": "myData"},
-  "title": "Bubble plot riviste",
   "name": "Bubble plot riviste",
   "id": "6",
+
+  "title":{
+    "text":"Bubble plot riviste",
+    "offset": 15,
+    "anchor": "middle",
+    "orient": "top",
+    "fontSize": 20,
+    "fontWeight": "normal",
+    "color": "#013378"
+
+  },
 
   "transform": [
     {
@@ -36,8 +46,9 @@
 
 
   "encoding": {
-    "x": {"field": "anno", "type": "ordinal", "axis":{"title":"Anno", "grid": true}},
-    "y": {"field": "journal", "type": "nominal", "axis":{"title":"Riviste", "grid":true}},
+    "x": {"field": "anno", "type": "ordinal", "axis":{"title":"Anno", "grid": true, "labels": true,
+      "labelAngle": 0, "minExtent": 20}},
+    "y": {"field": "journal", "type": "nominal", "axis":{"title":"Riviste", "minExtent":200, "grid":true}},
     "color": {
       "field": "quartile",
       "type": "nominal",
@@ -65,7 +76,7 @@
       "width": 40,
       "height": 100,
       "mark": {"type": "circle",
-      "size": 80},
+      "size": 85},
       "encoding": {
         "tooltip": null,
         "color": {
@@ -80,7 +91,12 @@
         "y": {
           "type": "nominal",
           "field": "quartile",
-          "title": null
+          "title": null,
+          "axis": {
+            "orient": "right",
+            "minExtent": 100,
+            "labels": true
+          }
         }
       },
       "selection": {

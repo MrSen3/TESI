@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Visualizzazione di dati bibliometrici</title>
-    <link href="prova.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <!-- Import Vega 5 & Vega-Lite 3 (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.4.0"></script>
@@ -13,19 +13,25 @@
 
 
 <body>
+<div id="header"><h1>TESI</h1></div>
 <div id="content">
-    <h1>TESI</h1>
+
     <div id="profilo">
         <h2>Profilo</h2>
         <p>Nome: Luigi</p><p>Cognome: De Russis</p><p>Matricola: 025734</p><p>Qualifica:RA</p>
     </div>
-    <div id="scatterplot"></div>
-    <div id="wordcloud"></div>
-    <div id="histogram1"></div>
-    <div id="bubbleplot1"></div>
-    <div id="histogram2"></div>
-    <div id="bubbleplot2"></div>
+    <div id="graphs">
+        <div id="scatterplot"></div>
+        <div id="wordcloud"></div>
+        <div id="histogram1"></div>
+        <div id="bubbleplot1"></div>
+        <div id="histogram2"></div>
+        <div id="bubbleplot2"></div>
+    </div>
 <script src="visualizza.js"> </script>
 </div>
+<footer id="footer">
+    <p> Autore: Silvio Senese </p>
+</footer>
 </body>
 </html>

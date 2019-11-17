@@ -4,18 +4,14 @@ p{margin:0 1em 1em}
 a{padding:1em; text-decoration:none; color:#000000;}
 div#header{background-color:#F3F2ED;}
 div#header h1{height:80px;line-height:80px;margin:0;padding-left:10px;}
-div#container{text-align:left}
+div#graphs{text-align:left}
 div#content p{line-height:1.4}
-div#form{background:#F6F0E0;}
-div#form ul{margin:15px 0; padding:0; list-style-type:none;}
-div#form li{margin-bottom:5px;}
 div#profilo{background:linen;}
 div#footer{background:linen;}
 div#footer p{margin:0;padding:5px 10px}
 
-
-div#container{width:90%;margin:0 auto; border-width:thin; border-style:solid}
+div#graphs{width:60%;margin:0 auto; border-width:thin; border-style:solid}
 div#form{float:left; clear:left; width:29.76%; border-width:thin; border-style:solid}
 div#profilo{float:left; width:29.76%; border-width:thin; border-style:solid}
-div#content{float:right;width:70%; border-width:thin; border-style:solid}
+div#content{float:left;width:70%; border-width:thin; border-style:solid; margin: auto}
 div#footer{clear:both;width:100%; border-width:thin; border-style:solid}

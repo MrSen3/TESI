@@ -3,10 +3,18 @@
   "data": {"name": "myData"},
   "name": "Bubble plot dei coautori",
   "id": "4",
-  "title": "Bubble plot coautori",
   "width": 650,
   "height": 700,
+  "title":{
+    "text":"Bubble plot coautori",
+    "offset": 15,
+    "anchor": "middle",
+    "orient": "top",
+    "fontSize": 20,
+    "fontWeight": "normal",
+    "color": "#013378"
 
+  },
 
   "mark": {
     "type": "circle",
@@ -16,8 +24,9 @@
     "fill": "#4682b4"
   },
   "encoding": {
-    "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno", "grid": true}},
-    "y": {"field": "cognome", "type": "nominal", "sort":null, "axis":{"title":"Coautori", "grid":true}},
+    "x": {"field": "year", "type": "ordinal", "axis":{"title":"Anno", "grid": true, "labels": true,
+      "labelAngle": 0, "minExtent": 20}},
+    "y": {"field": "cognome", "type": "nominal", "sort":null, "axis":{"title":"Coautori", "minExtent":150, "grid":true}},
     "size": {
       "field": "contributi",
       "type": "quantitative",

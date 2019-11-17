@@ -1,9 +1,20 @@
 { "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"name": "myData"},
   "name": "Grafico a linee con marcatori di punti",
+  "title":{
+    "text":"Line chart with point markers",
+    "anchor": "middle",
+    "orient": "top",
+    "offset": 15,
+    "fontSize": 20,
+    "fontWeight": "normal",
+    "color": "#013378"
+
+  },
+
   "id": "1",
   "width": "500",
-  "height": "300",
+  "height": "400",
   "transform": [
     {
       "aggregate": [{"op": "count", "as": "num_pubblicazioni"}],
@@ -28,8 +39,13 @@
       "x": {
         "field": "year",
         "type": "ordinal",
+        "sort": null,
         "axis": {
-          "title": "Anno"
+          "title": "Anno",
+          "labels": true,
+          "labelAngle": 0,
+          "minExtent": 20
+
         }
       },
       "y": {

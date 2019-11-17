@@ -3,7 +3,16 @@
   "data": {"name": "myData"},
   "name": "Istogramma in pila con barre divise per tipologia",
   "id": "3",
-  "title": "Istogramma con barre in pila in base al tipo",
+
+  "title":{
+    "text":"Istogramma con barre in pila in base al tipo",
+    "offset": 15,
+    "anchor": "middle",
+    "orient": "top",
+    "fontSize": 20,
+    "fontWeight": "normal",
+    "color": "#013378"
+  },
 
   "transform": [
     {
@@ -14,12 +23,13 @@
 
   "hconcat": [
     {
-      "width": 600,
-      "height": 500,
+      "width": 550,
+      "height": 425,
 
       "mark": "bar",
       "encoding": {
-        "x": {"field": "year", "type": "ordinal",  "axis":{"title":"Anno"}},
+        "x": {"field": "year", "type": "ordinal",  "axis":{"title":"Anno", "labels": true,
+          "labelAngle": 0, "minExtent": 20}},
         "y": {"field": "num_pubblicazioni", "type": "quantitative","axis":{"title":"Numero di pubblicazioni"}},
         "color":{"field": "description", "type": "nominal", "legend":null},
         "tooltip": [
@@ -44,11 +54,11 @@
     },
     {
 
-      "width": 40,
-      "height": 100,
+      "width": 50,
+      "height": 130,
 
       "mark": {"type": "circle",
-        "size": 80},
+        "size": 85},
       "encoding": {
         "tooltip": null,
         "color": {
@@ -63,7 +73,12 @@
         "y": {
           "type": "nominal",
           "field": "description",
-          "title": null
+          "title": null,
+          "axis": {
+            "orient": "right",
+           "minExtent": 170,
+            "labels": true
+          }
         }
       },
       "selection": {

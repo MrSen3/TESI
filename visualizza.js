@@ -43,23 +43,41 @@ var riviste;
 function salvaPubblicazioni(data){
     pubblicazioni = JSON.parse(data);
     console.log(pubblicazioni);
-    for (let i=0; i<pubblicazioni.length; ++i){
-        if(pubblicazioni[i].year==9999){
+
+    for (let i=0; i<pubblicazioni.length; i++){
+        if(pubblicazioni[i].year===9999){
             pubblicazioni[i].year="In stampa"
         }
     }
-    console.log(pubblicazioni);
+    pubblicazioni.sort(function(a, b){
+        if(typeof a.year == "string" && typeof b.year=="number"){
+            return 1
+        }
+        if(typeof a.year == "number" && typeof b.year=="string"){
+            return -1
+        }
+        return a.year-b.year
+    });
 }
 
 function salvaCoautori(data){
     coautori = JSON.parse(data);
-    console.log(coautori);
+
     for (let i=0; i<coautori.length; ++i) {
-        if (coautori[i].year == 9999) {
+        if (coautori[i].year === 9999) {
             coautori[i].year = "In stampa"
         }
     }
-    console.log(coautori);
+    coautori.sort(function(a, b){
+        if(typeof a.year == "string" && typeof b.year=="number"){
+            return 1
+        }
+        if(typeof a.year == "number" && typeof b.year=="string"){
+            return -1
+        }
+        return a.year-b.year
+    });
+
 }
 
 function salvaRiviste(data){
@@ -75,90 +93,57 @@ function visualizza (data) {
     //console.log(json.title);
 
     if(json.id==1){
-        vegaEmbed('#scatterplot', json).then(res =>
+        vegaEmbed('#scatterplot', json, opt).then(res =>
             res.view
                 .insert('myData',
                  //ci vuole  un array al posto delle quadre
            pubblicazioni)
                 .run()
         );
-        // vegaEmbed("#scatterplot", json)
-        //     .then(result => console.log("ciao"))
-        //     .catch(console.warn);
     }
 
     if(json.id==2){
-        vegaEmbed('#wordcloud', json).then(res =>
+        vegaEmbed('#wordcloud', json, opt).then(res =>
             res.view
                 .insert('table',
                  //ci vuole  un array al posto delle quadre
                     pubblicazioni)
                 .run()
         );
-        //Se vegaEmbed ha esito positivo allora viene eseguito quello che c'e' dentro al then, altrimenti viene eseguito quello dentro al catch
-        // vegaEmbed("#wordcloud", json)
-        //    .then(result => console.log("ciao"))
-        //     .catch(console.warn);
     }
     if(json.id==3){
-        vegaEmbed('#histogram1', json).then(res =>
+        vegaEmbed('#histogram1', json, opt).then(res =>
             res.view
                 .insert('myData',
                     //ci vuole  un array al posto delle quadre
                     pubblicazioni)
                 .run()
         );
-        // vegaEmbed("#histogram1", json)
-        //     .then(result => console.log("ciao"))
-        //     .catch(console.warn);
     }
 
     if(json.id==4){
-        // vegaEmbed("#bubbleplot1", json)
-        //     .then(result => console.log("ciao"))
-        //     .catch(console.warn);
-        vegaEmbed('#bubbleplot1', json).then(res =>
+        vegaEmbed('#bubbleplot1', json, opt).then(res =>
             res.view
-                .insert('myData',
-                    //ci vuole  un array al posto delle quadre
-                    coautori)
+                .insert('myData', coautori)
                 .run()
         );
 
     }
 
     if(json.id==5){
-        // vegaEmbed("#histogram2", json)
-        //     .then(result => console.log("ciao"))
-        //     .catch(console.warn);
-        vegaEmbed('#histogram2', json).then(res =>
+        vegaEmbed('#histogram2', json, opt).then(res =>
             res.view
-                .insert('myData',
-                    //ci vuole  un array al posto delle quadre
-                    riviste)
+                .insert('myData', riviste)
                 .run()
         );
     }
 
     if (json.id==6){
-        // vegaEmbed("#bubbleplot2", json)
-        //     .then(result => console.log("ciao"))
-        //     .catch(console.warn);
-        vegaEmbed('#bubbleplot2', json).then(res =>
+        vegaEmbed('#bubbleplot2', json, opt).then(res =>
             res.view
-                .insert('myData',
-                    //ci vuole  un array al posto delle quadre
-                    riviste)
+                .insert('myData', riviste)
                 .run()
         );
-    }
-    //se il json ha l'indicazione 'update' allora creo un paragrafo <p>, ci scrivo l'update e lo attacco(append) dopo la tabella
-    if (json.update) {
-        let p = document.createElement("p");
-        let text = document.createTextNode("Aggiornata al: " + json.update);
-        p.appendChild(text);
-
-        el.appendChild(p);
     }
 
 }

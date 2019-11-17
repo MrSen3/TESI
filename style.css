@@ -1,20 +1,88 @@
+html,body{
+    margin:0;
+    padding:0.7em;
+    box-sizing:border-box;
+    padding: 0.7em;
+}
 body{
     background-color: white;
     color: black;
     font-size: 100%;
     font-family: Arial, Verdana, sans-serif;
-
+    text-align:center;
 }
+
+#header{
+    background-color:#013378;
+    float: none;
+    clear: both;
+    font-size: 130%;
+    text-align: center;
+
+    padding: 0.4em;
+    border-bottom: 0.6em solid lightyellow;
+
+    color: white;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
 div{
-    border: darkseagreen;
-    border-style: solid;
+    /*border: black;
+    border-style: solid;*/
     width: inherit;
+    box-sizing:border-box;
+    padding: 0.7em
 }
 #content{
-    border: none;
-    border-style: none;
-    width: auto;
+    border-top: none;
+    border-bottom:none;
+
     /*min-width: 40%;*/
-    margin-left: 5%;
-    margin-top: 5%;
+    width:90%;
+    margin:auto;
+
 }
+div#profilo{
+    background:lightyellow;
+    float:left;
+    width:30%;
+    border-width:thin;
+    border-style:dotted;
+    box-sizing:border-box;
+    padding: 0.7em;
+}
+
+div#graphs{
+    width:100%;
+    margin:auto;
+    padding-bottom: 10%;
+}
+div#scatterplot{
+    float:left;
+    width: 50%;
+    margin-left:8%;
+}
+
+#footer{
+    width:100%;
+    border-top: dotted;
+    border-width:thin;
+    background:lightyellow;
+    border-top-color: #013378;
+    padding: 0.1em;
+    float: none;
+    clear: both;
+
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: normal;
+    font-family: serif;
+    line-height: 100%;
+    text-align: left;
+
+    min-width: 30em;
+
+}
+
+
