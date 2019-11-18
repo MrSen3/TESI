@@ -55,7 +55,7 @@
     {
 
       "width": 50,
-      "height": 130,
+      "height": 180,
 
       "mark": {"type": "circle",
         "size": 85},
@@ -63,7 +63,7 @@
         "tooltip": null,
         "color": {
           "condition": {
-            "type": "nominal",
+            "type": "ordinal",
             "field": "description",
             "legend": null,
             "selection": "legend"

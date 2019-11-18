@@ -13,7 +13,7 @@
   },
 
   "id": "1",
-  "width": "500",
+  "width": "530",
   "height": "400",
   "transform": [
     {
@@ -44,8 +44,9 @@
           "title": "Anno",
           "labels": true,
           "labelAngle": 0,
-          "minExtent": 20
-
+          "minExtent": 20,
+          "labelBound": false,
+          "labelOverlap": true
         }
       },
       "y": {

@@ -37,12 +37,13 @@ function loadASync(url, success) {
 function okStatus(s) {
     return [200, 304].indexOf(s) >= 0;
 }
+
 var pubblicazioni;
 var coautori;
 var riviste;
+
 function salvaPubblicazioni(data){
     pubblicazioni = JSON.parse(data);
-    console.log(pubblicazioni);
 
     for (let i=0; i<pubblicazioni.length; i++){
         if(pubblicazioni[i].year===9999){
@@ -82,22 +83,17 @@ function salvaCoautori(data){
 
 function salvaRiviste(data){
     riviste = JSON.parse(data);
-    console.log(riviste);
 }
 
 var opt={"actions": false};
 
 function visualizza (data) {
-    console.log(data);
     let json = JSON.parse(data);
-    //console.log(json.title);
 
     if(json.id==1){
         vegaEmbed('#scatterplot', json, opt).then(res =>
             res.view
-                .insert('myData',
-                 //ci vuole  un array al posto delle quadre
-           pubblicazioni)
+                .insert('myData', pubblicazioni)
                 .run()
         );
     }
@@ -105,18 +101,14 @@ function visualizza (data) {
     if(json.id==2){
         vegaEmbed('#wordcloud', json, opt).then(res =>
             res.view
-                .insert('table',
-                 //ci vuole  un array al posto delle quadre
-                    pubblicazioni)
+                .insert('table', pubblicazioni)
                 .run()
         );
     }
     if(json.id==3){
         vegaEmbed('#histogram1', json, opt).then(res =>
             res.view
-                .insert('myData',
-                    //ci vuole  un array al posto delle quadre
-                    pubblicazioni)
+                .insert('myData', pubblicazioni)
                 .run()
         );
     }
@@ -148,7 +140,6 @@ function visualizza (data) {
 
 }
 
-
 //Come dovro'modificare la funzione seguente?
 // 1)non sara piu' window.onload, ma sara' onsubmit o onclick del bottone del form
 // 2)per gestire diverse chiamate dovro' sostituire i div che creo durante la chiamata precedente, per farlo ho tre idee:
@@ -164,15 +155,12 @@ window.onload = function () {
     loadASync("articoliInRivista1.json", salvaRiviste);
 
     setTimeout((
-
-
     loadASync("scatterPlot.json", visualizza),
     loadASync("wordCloud.json", visualizza),
     //significa che come file deve prendere quello nella stessa cartella di 'funzioni.js' e che in caso di 'success'===true allora deve entrare in visualizza
     loadASync("histogram1.json", visualizza),
     loadASync("bubblePlot.json", visualizza),
     loadASync("histogram2.json", visualizza),
-    loadASync("bubblePlotRiviste.json", visualizza))
-    , 5000);
+    loadASync("bubblePlotRiviste.json", visualizza)), 5000);
 
 };

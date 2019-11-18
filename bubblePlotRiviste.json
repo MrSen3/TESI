@@ -47,7 +47,9 @@
 
   "encoding": {
     "x": {"field": "anno", "type": "ordinal", "axis":{"title":"Anno", "grid": true, "labels": true,
-      "labelAngle": 0, "minExtent": 20}},
+      "labelAngle": 0, "minExtent": 25
+    }
+    },
     "y": {"field": "journal", "type": "nominal", "axis":{"title":"Riviste", "minExtent":200, "grid":true}},
     "color": {
       "field": "quartile",
